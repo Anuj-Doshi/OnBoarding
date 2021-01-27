@@ -1,0 +1,16 @@
+PODS:
+  - SwiftyOnboard (1.3.8)
+
+DEPENDENCIES:
+  - SwiftyOnboard
+
+SPEC REPOS:
+  trunk:
+    - SwiftyOnboard
+
+SPEC CHECKSUMS:
+  SwiftyOnboard: de60e90c2af23dd61b01ec0c6a8d0be3370f857b
+
+PODFILE CHECKSUM: 6df9821c47ef4bfb9523fee0b2287c107cee2cad
+
+COCOAPODS: 1.9.1
