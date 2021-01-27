@@ -37,7 +37,7 @@ class ViewController: UIViewController {
     }
         
     func gradient() {
-        //Add the gradiant to the view:
+        
         self.gradiant.frame = view.bounds
         view.layer.addSublayer(gradiant)
     }
@@ -59,15 +59,13 @@ extension ViewController: SwiftyOnboardDelegate, SwiftyOnboardDataSource {
     }
     
     func swiftyOnboardBackgroundColorFor(_ swiftyOnboard: SwiftyOnboard, atIndex index: Int) -> UIColor? {
-        //Return the background color for the page at index:
+        
         return colors[index]
     }
     
     func swiftyOnboardPageForIndex(_ swiftyOnboard: SwiftyOnboard, index: Int) -> SwiftyOnboardPage? {
         let view = SwiftyOnboardPage()
-        view.imageView.image = UIImage(named: "onboard\(index)")
-        view.title.font = UIFont(name: "Lato-Heavy", size: 22)
-        view.subTitle.font = UIFont(name: "Lato-Regular", size: 16)
+        //view.imageView.image = UIImage(named: "")
         view.title.text = titleArray[index]
         view.subTitle.text = subTitleArray[index]
         return view
@@ -75,7 +73,6 @@ extension ViewController: SwiftyOnboardDelegate, SwiftyOnboardDataSource {
     
     func swiftyOnboardViewForOverlay(_ swiftyOnboard: SwiftyOnboard) -> SwiftyOnboardOverlay? {
         let overlay = SwiftyOnboardOverlay()
-        
         overlay.skipButton.addTarget(self, action: #selector(handleSkip), for: .touchUpInside)
         overlay.continueButton.addTarget(self, action: #selector(handleContinue), for: .touchUpInside)
         overlay.continueButton.titleLabel?.font = UIFont(name: "Lato-Bold", size: 16)
